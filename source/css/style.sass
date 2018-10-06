@@ -135,38 +135,82 @@ body, html
 
         &__heading
             +reset
-            font: rem(60) $title
             color: $white
+            font: rem(60) $title
 
         &__allprojects
-            padding: 3%
+            box-sizing: border-box
             display: flex
             flex-wrap: wrap
+            left: 50%
+            position: absolute
+            top: 15%
+            transform: translateX(-50%)
             width: 90%
             +breakpoint($lg)
                 width: 80%
 
         &__project
-            height: 20%
             background: $dark-blue
             border-radius: 10px
+            box-sizing: border-box
+            height: 40%
+            max-height: rem(250)
+            padding: rem(20)
             width: 100%
+
+        &__moreprojects
+            +reset-button
+            background-color: $turquoise
+            border-radius: 10px
+            color: $white
+            display: none
+            font: rem(18) $slim
+            height: 5%
+            left: 50%
+            position: absolute
+            top: 90%
+            transform: translateX(-50%)
+            width: 20%
         
         .cm-project
+            &__content
+                float: right
+                height: 90%
+                width: 60%
+                +breakpoint($lg)
+                    text-align: left
+                    width: 70%
+
             &__title
                 +reset
-                font: rem(22) $slim
                 color: $white
+                font: rem(22) $slim
+                margin-bottom: rem(15)
                 +breakpoint($lg)
                     font-size: rem(28)
             
             &__description
                 +reset
-                font: rem(16) $sans
                 color: $white
+                font: 300 rem(16) $sans
                 +breakpoint($lg)
-                    font-size: rem(22)
+                    font-size: rem(18)
             
+            &__img
+                position: relative
+                float: left
+                height: 90%
+                width: 40%
+                +breakpoint($lg)
+                    width: 23%
+                    padding: 0
+                
+                img
+                    margin: 15% 0
+                    height: auto
+                    width: 100%
+                    +breakpoint($lg)
 
     &-academic
         +reset

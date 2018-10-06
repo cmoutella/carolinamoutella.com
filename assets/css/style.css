@@ -181,13 +181,17 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 3.75rem "Abril Fatface", cursive;
   color: #fefcfd;
+  font: 3.75rem "Abril Fatface", cursive;
 }
 .cm-projects__allprojects {
-  padding: 3%;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  left: 50%;
+  position: absolute;
+  top: 15%;
+  transform: translateX(-50%);
   width: 90%;
 }
 @media (min-width: 62rem) {
@@ -196,17 +200,51 @@ body, html {
   }
 }
 .cm-projects__project {
-  height: 20%;
   background: #28536b;
   border-radius: 10px;
+  box-sizing: border-box;
+  height: 40%;
+  max-height: 15.625rem;
+  padding: 1.25rem;
   width: 100%;
+}
+.cm-projects__moreprojects {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: #05a8aa;
+  border-radius: 10px;
+  color: #fefcfd;
+  display: none;
+  font: 1.125rem "Poiret One", cursive;
+  height: 5%;
+  left: 50%;
+  position: absolute;
+  top: 90%;
+  transform: translateX(-50%);
+  width: 20%;
+}
+.cm-projects .cm-project__content {
+  float: right;
+  height: 90%;
+  width: 60%;
+}
+@media (min-width: 62rem) {
+  .cm-projects .cm-project__content {
+    text-align: left;
+    width: 70%;
+  }
 }
 .cm-projects .cm-project__title {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 1.375rem "Poiret One", cursive;
   color: #fefcfd;
+  font: 1.375rem "Poiret One", cursive;
+  margin-bottom: 0.9375rem;
 }
 @media (min-width: 62rem) {
   .cm-projects .cm-project__title {
@@ -217,13 +255,30 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 1rem Montserrat, sans-serif;
   color: #fefcfd;
+  font: 300 1rem Montserrat, sans-serif;
 }
 @media (min-width: 62rem) {
   .cm-projects .cm-project__description {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
+}
+.cm-projects .cm-project__img {
+  position: relative;
+  float: left;
+  height: 90%;
+  width: 40%;
+}
+@media (min-width: 62rem) {
+  .cm-projects .cm-project__img {
+    width: 23%;
+    padding: 0;
+  }
+}
+.cm-projects .cm-project__img img {
+  margin: 15% 0;
+  height: auto;
+  width: 100%;
 }
 .cm-academic {
   box-sizing: border-box;
