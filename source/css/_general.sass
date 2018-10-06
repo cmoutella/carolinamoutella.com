@@ -1,0 +1,107 @@
+//Imports
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800")
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface')
+@import url('https://fonts.googleapis.com/css?family=Poiret+One')
+
+//Colors
+$blue: #afd6cb
+$green: #a7d3a6
+$pink: #efd2cb
+$pinker: #ffcfd2
+$yellow: #f7ef81
+$purple: #baa7b0
+$dark-purple: #564256
+$turquoise: #05a8aa
+$white: #fefcfd
+$super-dark-blue: #283044
+$dark-blue: #28536b
+
+//Fonts
+$sans: Montserrat, sans-serif
+$title: 'Abril Fatface', cursive
+$slim: 'Poiret One', cursive
+
+$base-font-size: 16px
+    
+    
+// Screen Sizes
+$sm: (col:  1, gut: 24/2, max:  540, bkp:  576)
+$md: (col: 12, gut: 12/2, max:  720, bkp:  768)
+$lg: (col: 12, gut: 16/2, max: 1366, bkp:  992)
+$xl: (col: 12, gut: 16/2, max: 1366, bkp: 1140)
+
+
+// Functions
+@function col($bp: $sm, $columns: 1)
+	@if type-of($bp) == number
+		@return (100% / round($bp)) * $columns
+	@else
+		@return (100% / map-get($bp, col)) * $columns
+
+@function gut($bp: $sm, $columns: 0)
+	$col: map-get($bp, col)
+	$gut: map-get($bp, gut)
+	$max: map-get($bp, max)
+	@if $columns == 0
+		$columns: $col
+	@return percentage($gut / ($max * $columns / $col))
+
+@function rem($px, $line: 0)
+	$size: (($px * 1px) / $base-font-size) * 1rem
+	@if $line > 0
+		@return #{$size}/#{$line}
+	@else
+		@return $size
+
+@function em($px, $line: 0)
+	$size: (($px * 1px) / $base-font-size) * 1em
+	@if $line > 0
+		@return #{$size}/#{$line / $px}
+	@else
+		@return $size
+
+@function strip-units($number)
+	@return $number / ($number * 0 + 1)
+
+
+// Mixins
+=breakpoint($bp: $sm, $max: false)
+	@if ($max)
+		@media (max-width: rem(map-get($bp, bkp) - 1))
+			@content
+	@else
+		@media (min-width: rem(map-get($bp, bkp)))
+			@content
+
+=clearfix
+	&:after
+		clear: both
+		content: ""
+		display: table
+
+=reset
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+=reset-list
+	+reset
+	list-style: none
+
+=reset-button
+	+reset
+	background: transparent
+	border: none
+	cursor: pointer
+
+=responsive-image
+	display: block
+	height: auto
+	width: 100%
+
+
+=hide
+	color: transparent
+	display: none
+	font: 0/0 serif
+	height: rem(0)
