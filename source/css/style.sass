@@ -13,6 +13,7 @@ body, html
 
 .cm
 	&-header
+		box-sizing: border-box
 		background-color: $pinker
 		background-image: linear-gradient(to top right, $pinker 50%, $white 50%)
 		display: flex
@@ -22,7 +23,9 @@ body, html
 		align-content: space-around
 		height: 100vh
 		width: 100vw
-		z-index: 6 //fazer sumir as dots
+		padding: 10% 0
+		+breakpoint($lg)
+			z-index: 6 //fazer sumir as dots
 
 		img
 			border-radius: 50%
@@ -35,6 +38,7 @@ body, html
 		&__content
 			text-align: center
 			+breakpoint($lg)
+			margin: 0
 
 		&__title
 			+reset
@@ -135,6 +139,7 @@ body, html
 			+reset
 			color: $white
 			font: 300 rem(14) $sans
+			line-height: rem(20)
 			+breakpoint($lg)
 				font-size: rem(22)
 				line-height: rem(35)
@@ -142,7 +147,7 @@ body, html
 		div
 			box-sizing: border-box
 			border-radius: 10px
-			height: 32%
+			height: 43vh
 			opacity: 0.8
 			text-align: center
 			width: 90%

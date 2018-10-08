@@ -20,6 +20,7 @@ body, html {
 }
 
 .cm-header {
+  box-sizing: border-box;
   background-color: #ffcfd2;
   background-image: linear-gradient(to top right, #ffcfd2 50%, #fefcfd 50%);
   display: flex;
@@ -29,7 +30,12 @@ body, html {
   align-content: space-around;
   height: 100vh;
   width: 100vw;
-  z-index: 6;
+  padding: 10% 0;
+}
+@media (min-width: 62rem) {
+  .cm-header {
+    z-index: 6;
+  }
 }
 .cm-header img {
   border-radius: 50%;
@@ -44,6 +50,7 @@ body, html {
 }
 .cm-header__content {
   text-align: center;
+  margin: 0;
 }
 .cm-header__title {
   box-sizing: border-box;
@@ -177,6 +184,7 @@ body, html {
   padding: 0;
   color: #fefcfd;
   font: 300 0.875rem Montserrat, sans-serif;
+  line-height: 1.25rem;
 }
 @media (min-width: 62rem) {
   .cm-about p {
@@ -187,7 +195,7 @@ body, html {
 .cm-about div {
   box-sizing: border-box;
   border-radius: 10px;
-  height: 32%;
+  height: 43vh;
   opacity: 0.8;
   text-align: center;
   width: 90%;
