@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
 </head>
 <body>
-    <header class="cm-header">
+    <header class="cm-header" id="home">
         <img src="assets/img/carolina.jpeg" alt="Carolina Moutella">
         <div class="cm-header__content">
             <h1 class="cm-header__title">Carolina Moutella</h1>
@@ -16,23 +16,39 @@
         </div>
     </header>
 
+    <section class="cm-navigation">
+        <a id="home-link" href="#home"></a>
+        <a id="sobre-link" href="#sobre"></a>
+        <a id="projetos-link" href="#projetos"></a>
+        <a id="contato-link" href="#contato"></a>
+    </section>
+
     <section class="cm-nav">
+        <button class="cm-nav__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        </button>
         <ul class="cm-nav__menu">
             <li class="cm-nav__item"><a href="">Home</a></li>
             <li class="cm-nav__item"><a href="">Sobre mim</a></li>
             <li class="cm-nav__item"><a href="">Projetos</a></li>
-            <li class="cm-nav__item"><a href="">Acadêmico</a></li>            
+            <li class="cm-nav__item off"><a href="">Acadêmico</a></li>            
         </ul>
     </section>
 
-    <section class="cm-about">
+    <section class="cm-about" id="sobre">
         <div class="cm-about__me">
             <h3>Quem sou eu</h3>
-            <p>text text text</p>
+            <p>Sou do Rio de Janeiro, graduanda em Ciência da Computação e apaixonada por design e inovação.
+                Me interesso por estudos do uso da tecnologia e comportamento social, e inteligência artificial.
+                Adoro ler, sair pra conversar e conhecer novos espaços.
+                E tenho uma <span>gatinha</span>.</p>
         </div>
         <div class="cm-about__do">
             <h3>O que eu faço</h3>
-            <p>text text text</p>
+            <p>Desenvolvo sites, blogs e landins pages. Com criação do layout junto ao cliente, utilizando HTML5, CSS3 e JavaScript, ferramentas atuais e técnicas SEO.</p>
         </div>
         <div class="cm-about__believes">
             <h3>No que eu acredito</h3>
@@ -40,9 +56,10 @@
         </div>
     </section>
 
-    <section class="cm-projects">
+    <section class="cm-projects" id="projetos">
         <h1 class="cm-projects__heading">Projetos</h1>
         <div class="cm-projects__allprojects">
+
             <div class="cm-projects__project">
                 <div class="cm-project__content">
                     <h3 class="cm-project__title">Cactus</h3>
@@ -52,26 +69,44 @@
                     <img src="assets/img/mockups/mockupcactus.png" alt="Projeto Cactus">
                 </div>
             </div>
+
         </div>
-        <button class="cm-projects__moreprojects">Meu behance</button>
+        <button class="cm-projects__moreprojects off">Meu behance</button>
     </section>
 
-    <section class="cm-academic">
+    <section class="cm-academic off" id="academico">
         <h1 class="cm-academic__heading">Acadêmico</h1>
-        <div class="cm-academic__research">
-            <h2>Pesquisas</h2>
-        </div>
-        <div class="cm-academic__articles">
-            <h2>Artigos</h2>
+            <div class="cm-academic__content">
+            <div class="cm-academic__research">
+                <h2>Pesquisas</h2>
+            </div>
+            <div class="cm-academic__articles">
+                <h2>Artigos</h2>
+            </div>
         </div>
     </section>
 
-    <section class="cm-contact">
+    <section class="cm-contact" id="contato">
         <div class="cm-contact__content">
             <h3 class="cm-contact__heading">Entre em contato</h3>
+            <div class=cm-contact__contact>
+                <h4>E-mail</h4>
+                <p>ola@carolinamoutella.com</p>
+            </div>
+            <div class=cm-contact__contact>
+                <h4>Minhas redes</h4>
+                <div>
+                    <a href="https://www.linkedin.com/in/carolinamoutella/"><div class="cm-contact__linkedin"></div></a>
+                    <!--<a data-contact-id="live:e29254e81b94f8a9"><div class="cm-contact__skype"></div></a>-->
+                    <a href="https://github.com/cmoutella"><div class="cm-contact__github"></div></a>
+                    <a href="https://twitter.com/moutellacode"><div class="cm-contact__twitter"></div></a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!--Scripts-->
     <script src="./assets/js/main.js"></script>
+    <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
 </body>
 </html>

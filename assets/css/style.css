@@ -7,42 +7,43 @@ body, html {
   padding: 0;
 }
 
+.cm-academic__heading, .cm-projects__heading {
+  margin: 0;
+  padding: 1.25rem 0;
+  font: 3.75rem "Abril Fatface", cursive;
+  color: #564256;
+}
+@media (min-width: 62rem) {
+  .cm-academic__heading, .cm-projects__heading {
+    padding: 2.1875rem 0;
+  }
+}
+
 .cm-header {
   background-color: #ffcfd2;
   background-image: linear-gradient(to top right, #ffcfd2 50%, #fefcfd 50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
   height: 100vh;
   width: 100vw;
-  text-align: center;
+  z-index: 6;
 }
 .cm-header img {
   border-radius: 50%;
   border: 5px solid #baa7b0;
-  position: absolute;
   height: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 13%;
 }
 @media (min-width: 62rem) {
   .cm-header img {
     height: 50%;
     border-width: 10px;
-    left: 8%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 .cm-header__content {
-  position: absolute;
   text-align: center;
-  top: 60%;
-}
-@media (min-width: 62rem) {
-  .cm-header__content {
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 }
 .cm-header__title {
   box-sizing: border-box;
@@ -68,6 +69,42 @@ body, html {
   .cm-header__subtitle {
     font-size: 3.125rem;
     line-height: 4.375rem;
+  }
+}
+.cm-navigation {
+  align-items: center;
+  background-color: #564256;
+  display: flex;
+  height: 1.875rem;
+  justify-content: center;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+}
+@media (min-width: 62rem) {
+  .cm-navigation {
+    background-color: transparent;
+    flex-direction: column;
+    height: 100vh;
+    opacity: 1;
+    width: 5vw;
+  }
+}
+.cm-navigation a {
+  background-color: #fefcfd;
+  border-radius: 50%;
+  display: block;
+  height: 0.9375rem;
+  margin: 0 0.8125rem;
+  width: 0.9375rem;
+}
+@media (min-width: 62rem) {
+  .cm-navigation a {
+    height: 0.9375rem;
+    margin: 0.9375rem 0;
+    width: 0.9375rem;
   }
 }
 .cm-nav {
@@ -104,6 +141,7 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  align-content: space-around;
   align-items: center;
   background-color: #ffcfd2;
   background-image: linear-gradient(to bottom right, #ffcfd2 50%, #baa7b0 50%);
@@ -124,47 +162,53 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #564256;
+  color: #fefcfd;
   font: 1.375rem "Abril Fatface", cursive;
   margin: 5% 0;
 }
 @media (min-width: 62rem) {
   .cm-about h3 {
-    font-size: 2rem;
+    font-size: 2.125rem;
   }
 }
 .cm-about p {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 0.875rem Montserrat, sans-serif;
+  color: #fefcfd;
+  font: 300 0.875rem Montserrat, sans-serif;
 }
 @media (min-width: 62rem) {
   .cm-about p {
-    font-size: 1.625rem;
+    font-size: 1.375rem;
+    line-height: 2.1875rem;
   }
 }
 .cm-about div {
+  box-sizing: border-box;
   border-radius: 10px;
   height: 32%;
   opacity: 0.8;
   text-align: center;
   width: 90%;
+  padding: 0 0.9375rem;
 }
 @media (min-width: 62rem) {
   .cm-about div {
-    width: 30%;
-    height: 80vh;
+    width: 40%;
+    height: 50vh;
+    padding: 0 1.875rem;
   }
 }
 .cm-about__me {
-  background-color: #afd6cb;
+  background-color: #283044;
 }
 .cm-about__do {
-  background-color: #a7d3a6;
+  background-color: #283044;
 }
 .cm-about__believes {
-  background-color: #f7ef81;
+  background-color: #283044;
+  display: none;
 }
 .cm-projects {
   box-sizing: border-box;
@@ -178,11 +222,7 @@ body, html {
   width: 100vw;
 }
 .cm-projects__heading {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   color: #fefcfd;
-  font: 3.75rem "Abril Fatface", cursive;
 }
 .cm-projects__allprojects {
   box-sizing: border-box;
@@ -190,7 +230,7 @@ body, html {
   flex-wrap: wrap;
   left: 50%;
   position: absolute;
-  top: 15%;
+  top: 20%;
   transform: translateX(-50%);
   width: 90%;
 }
@@ -203,10 +243,17 @@ body, html {
   background: #28536b;
   border-radius: 10px;
   box-sizing: border-box;
-  height: 40%;
   max-height: 15.625rem;
-  padding: 1.25rem;
+  opacity: 0.8;
+  padding: 0 0.9375rem;
   width: 100%;
+}
+@media (min-width: 62rem) {
+  .cm-projects__project {
+    padding: 0 1.875rem;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .cm-projects__moreprojects {
   box-sizing: border-box;
@@ -218,7 +265,6 @@ body, html {
   background-color: #05a8aa;
   border-radius: 10px;
   color: #fefcfd;
-  display: none;
   font: 1.125rem "Poiret One", cursive;
   height: 5%;
   left: 50%;
@@ -228,6 +274,7 @@ body, html {
   width: 20%;
 }
 .cm-projects .cm-project__content {
+  margin-top: 3%;
   float: right;
   height: 90%;
   width: 60%;
@@ -248,7 +295,7 @@ body, html {
 }
 @media (min-width: 62rem) {
   .cm-projects .cm-project__title {
-    font-size: 1.75rem;
+    font-size: 2.125rem;
   }
 }
 .cm-projects .cm-project__description {
@@ -260,7 +307,7 @@ body, html {
 }
 @media (min-width: 62rem) {
   .cm-projects .cm-project__description {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
   }
 }
 .cm-projects .cm-project__img {
@@ -291,16 +338,51 @@ body, html {
   text-align: center;
   width: 100vw;
 }
-.cm-academic__heading {
+.cm-academic__content {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 75%;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+  position: relative;
+}
+@media (min-width: 62rem) {
+  .cm-academic__content {
+    padding: 0 1.875rem;
+    width: 80%;
+  }
+}
+.cm-academic__content div {
+  background-color: #283044;
+  border-radius: 10px;
+  height: 47%;
+  opacity: 0.8;
+  width: 100%;
+}
+@media (min-width: 62rem) {
+  .cm-academic__content div {
+    height: 100%;
+    width: 47%;
+  }
+}
+.cm-academic__content div h2 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 3.75rem "Abril Fatface", cursive;
-  color: #564256;
+  color: #fefcfd;
+  font: 1.375rem "Abril Fatface", cursive;
+  margin: 5% 0;
+}
+@media (min-width: 62rem) {
+  .cm-academic__content div h2 {
+    font-size: 2.125rem;
+  }
 }
 .cm-contact {
   background-color: #ffcfd2;
-  background-image: linear-gradient(to top right, #fefcfd 50%, #ffcfd2 50%);
+  background-image: linear-gradient(to bottom right, #efd2cb 50%, #ffcfd2 50%);
   height: 100vh;
   position: relative;
   text-align: center;
@@ -310,19 +392,83 @@ body, html {
   box-sizing: border-box;
   height: 80%;
   width: 80%;
-  background-color: #564256;
+  background-color: #283044;
   position: relative;
   padding: 5%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (min-width: 62rem) {
+  .cm-contact__content {
+    height: 75%;
+    width: 75%;
+  }
+}
 .cm-contact__heading {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font: 1.375rem "Abril Fatface", cursive;
+  color: #ffcfd2;
+}
+@media (min-width: 62rem) {
+  .cm-contact__heading {
+    font-size: 2.5rem;
+  }
+}
+.cm-contact__contact {
+  margin: 8% 0 0;
+}
+.cm-contact__contact h4 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #ffcfd2;
+  font: 1.625rem "Poiret One", cursive;
+}
+@media (min-width: 62rem) {
+  .cm-contact__contact h4 {
+    font-size: 1.875rem;
+  }
+}
+.cm-contact__contact p {
   color: #fefcfd;
+  font: 1.25rem "Poiret One", cursive;
+}
+@media (min-width: 62rem) {
+  .cm-contact__contact p {
+    font-size: 1.4375rem;
+  }
+}
+.cm-contact__contact div {
+  margin: 1.5625rem 0;
+  display: inline-block;
+  text-align: center;
+}
+.cm-contact__contact div div {
+  margin: 0 0.625rem;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.cm-contact__linkedin {
+  background-image: url(../img/icons/linkedin.png);
+  background-size: cover;
+  cursor: pointer;
+}
+.cm-contact__github {
+  background-image: url(../img/icons/github.png);
+  background-size: cover;
+  cursor: pointer;
+}
+.cm-contact__twitter {
+  background-image: url(../img/icons/twitter.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.off {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

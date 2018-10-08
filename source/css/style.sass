@@ -1,251 +1,371 @@
 @import "_general.sass"
 
 body, html
-    +reset
+	+reset
+
+%heading
+	margin: 0
+	padding: rem(20) 0
+	font: rem(60) $title
+	color: $dark-purple
+	+breakpoint($lg)
+		padding: rem(35) 0
 
 .cm
-    &-header
-        background-color: $pinker
-        background-image: linear-gradient(to top right, $pinker 50%, $white 50%)
-        height: 100vh
-        width: 100vw
-        text-align: center
+	&-header
+		background-color: $pinker
+		background-image: linear-gradient(to top right, $pinker 50%, $white 50%)
+		display: flex
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
+		align-content: space-around
+		height: 100vh
+		width: 100vw
+		z-index: 6 //fazer sumir as dots
 
-        img
-            border-radius: 50%
-            border: 5px solid $purple
-            position: absolute
-            height: 40%
-            left: 50%
-            transform: translateX(-50%)
-            top: 13%
-            +breakpoint($lg)
-                height: 50%
-                border-width: 10px
-                left: 8%
-                top: 50%
-                transform: translateY(-50%)
+		img
+			border-radius: 50%
+			border: 5px solid $purple
+			height: 40%
+			+breakpoint($lg)
+				height: 50%
+				border-width: 10px
 
-        &__content
-            position: absolute
-            text-align: center
-            top: 60%
-            +breakpoint($lg)
-                right: 8%
-                top: 50%
-                transform: translateY(-50%)
+		&__content
+			text-align: center
+			+breakpoint($lg)
 
-        &__title
-            +reset
-            color: $dark-purple
-            font: rem(50) $slim
-            margin-bottom: 3%
-            +breakpoint($lg)
-                font-size: rem(90)
+		&__title
+			+reset
+			color: $dark-purple
+			font: rem(50) $slim
+			margin-bottom: 3%
+			+breakpoint($lg)
+				font-size: rem(90)
 
-        &__subtitle
-            +reset
-            color: $dark-purple
-            font: rem(30) $slim
-            +breakpoint($lg)
-                font-size: rem(50)
-                line-height: rem(70)
-    
-    &-nav
-        +reset
-        display: none
+		&__subtitle
+			+reset
+			color: $dark-purple
+			font: rem(30) $slim
+			+breakpoint($lg)
+				font-size: rem(50)
+				line-height: rem(70)			
+	
+	&-navigation
+		align-items: center
+		background-color: $dark-purple
+		display: flex
+		height: rem(30)
+		justify-content: center
+		opacity: 0.5
+		position: fixed
+		top: 0
+		width: 100vw
+		z-index: 5
+		+breakpoint($lg)
+			background-color: transparent
+			flex-direction: column
+			height: 100vh
+			opacity: 1
+			width: 5vw
 
-        &--expanded
-            background-color: $white
-            display: block
-            height: 70vh
-            position: fixed
-            top: 0
-            +breakpoint($lg)
-                height: 100vh
+		a
+			background-color: $white
+			border-radius: 50%
+			display: block
+			height: rem(15)
+			margin: 0 rem(13)
+			width: rem(15)
+			+breakpoint($lg)
+				height: rem(15)
+				margin: rem(15) 0
+				width: rem(15)
 
-        &__menu
-            padding: 0
-            display: flex
+	&-nav
+		+reset
+		display: none
 
-        &__item
-            list-style-type: none
+		&--expanded
+			background-color: $white
+			display: block
+			height: 70vh
+			position: fixed
+			top: 0
+			+breakpoint($lg)
+				height: 100vh
 
-            a
-                text-decoration: none
-                color: $dark-purple
-                font: rem(30) $slim
+		&__menu
+			padding: 0
+			display: flex
 
-    &-about
-        +reset
-        align-items: center
-        background-color: $pinker
-        background-image: linear-gradient(to bottom right, $pinker 50%, $purple 50%)
-        display: flex
-        height: 100vh
-        position: relative
-        justify-content: space-around
-        padding: 3%
-        width: 100vw
-        flex-direction: column
-        +breakpoint($lg)   
-            flex-direction: row
-            
-        h3
-            +reset
-            color: $dark-purple
-            font: rem(22) $title
-            margin: 5% 0
-            +breakpoint($lg)
-                font-size: rem(32)
-            
-        p
-            +reset
-            font: rem(14) $sans
-            +breakpoint($lg)
-                font-size: rem(26)
+		&__item
+			list-style-type: none
 
-        div
-            border-radius: 10px
-            height: 32%
-            opacity: 0.8
-            text-align: center
-            width: 90%
-            +breakpoint($lg)
-                width: 30%
-                height: 80vh
+			a
+				text-decoration: none
+				color: $dark-purple
+				font: rem(30) $slim
 
-        &__me
-            background-color: $blue
+	&-about
+		+reset
+		align-content: space-around
+		align-items: center
+		background-color: $pinker
+		background-image: linear-gradient(to bottom right, $pinker 50%, $purple 50%)
+		display: flex
+		height: 100vh
+		position: relative
+		justify-content: space-around
+		padding: 3%
+		width: 100vw
+		flex-direction: column
+		+breakpoint($lg)   
+			flex-direction: row
+			
+		h3
+			+reset
+			color: $white
+			font: rem(22) $title
+			margin: 5% 0
+			+breakpoint($lg)
+				font-size: rem(34)
+			
+		p
+			+reset
+			color: $white
+			font: 300 rem(14) $sans
+			+breakpoint($lg)
+				font-size: rem(22)
+				line-height: rem(35)
 
-        &__do
-            background-color: $green
+		div
+			box-sizing: border-box
+			border-radius: 10px
+			height: 32%
+			opacity: 0.8
+			text-align: center
+			width: 90%
+			padding: 0 rem(15)
+			+breakpoint($lg)
+				width: 40%
+				height: 50vh
+				padding: 0 rem(30)
 
-        &__believes
-            background-color: $yellow
+		&__me
+			background-color: $super-dark-blue
 
-    &-projects
-        +reset
-        background-color: $purple
-        background-image: linear-gradient(to top right, $pink 50%, $purple 50%)
-        height: 100vh
-        position: relative
-        text-align: center
-        width: 100vw
+		&__do
+			background-color: $super-dark-blue
 
-        &__heading
-            +reset
-            color: $white
-            font: rem(60) $title
+		&__believes
+			background-color: $super-dark-blue
+			display: none
 
-        &__allprojects
-            box-sizing: border-box
-            display: flex
-            flex-wrap: wrap
-            left: 50%
-            position: absolute
-            top: 15%
-            transform: translateX(-50%)
-            width: 90%
-            +breakpoint($lg)
-                width: 80%
+	&-projects
+		+reset
+		background-color: $purple
+		background-image: linear-gradient(to top right, $pink 50%, $purple 50%)
+		height: 100vh
+		position: relative
+		text-align: center
+		width: 100vw
 
-        &__project
-            background: $dark-blue
-            border-radius: 10px
-            box-sizing: border-box
-            height: 40%
-            max-height: rem(250)
-            padding: rem(20)
-            width: 100%
+		&__heading
+			@extend %heading
+			color: $white
 
-        &__moreprojects
-            +reset-button
-            background-color: $turquoise
-            border-radius: 10px
-            color: $white
-            display: none
-            font: rem(18) $slim
-            height: 5%
-            left: 50%
-            position: absolute
-            top: 90%
-            transform: translateX(-50%)
-            width: 20%
-        
-        .cm-project
-            &__content
-                float: right
-                height: 90%
-                width: 60%
-                +breakpoint($lg)
-                    text-align: left
-                    width: 70%
+		&__allprojects
+			box-sizing: border-box
+			display: flex
+			flex-wrap: wrap
+			left: 50%
+			position: absolute
+			top: 20%
+			transform: translateX(-50%)
+			width: 90%
+			+breakpoint($lg)
+				width: 80%
 
-            &__title
-                +reset
-                color: $white
-                font: rem(22) $slim
-                margin-bottom: rem(15)
-                +breakpoint($lg)
-                    font-size: rem(28)
-            
-            &__description
-                +reset
-                color: $white
-                font: 300 rem(16) $sans
-                +breakpoint($lg)
-                    font-size: rem(18)
-            
-            &__img
-                position: relative
-                float: left
-                height: 90%
-                width: 40%
-                +breakpoint($lg)
-                    width: 23%
-                    padding: 0
-                
-                img
-                    margin: 15% 0
-                    height: auto
-                    width: 100%
-                    +breakpoint($lg)
+		&__project
+			background: $dark-blue
+			border-radius: 10px
+			box-sizing: border-box
+			max-height: rem(250)
+			opacity: 0.8
+			padding: 0 rem(15)
+			width: 100%
+			+breakpoint($lg)
+				padding: 0 rem(30)
+				width: 80%
+				margin: 0 auto
 
-    &-academic
-        +reset
-        background-color: $pink
-        background-image: linear-gradient(to bottom right, $pink 50%, $pinker 50%)
-        height: 100vh
-        position: relative
-        text-align: center
-        width: 100vw
+		&__moreprojects
+			+reset-button
+			background-color: $turquoise
+			border-radius: 10px
+			color: $white
+			font: rem(18) $slim
+			height: 5%
+			left: 50%
+			position: absolute
+			top: 90%
+			transform: translateX(-50%)
+			width: 20%
+		
+		.cm-project
+			&__content
+				margin-top: 3%
+				float: right
+				height: 90%
+				width: 60%
+				+breakpoint($lg)
+					text-align: left
+					width: 70%
 
-        &__heading
-            +reset
-            font: rem(60) $title
-            color: $dark-purple
+			&__title
+				+reset
+				color: $white
+				font: rem(22) $slim
+				margin-bottom: rem(15)
+				+breakpoint($lg)
+					font-size: rem(34)
+			
+			&__description
+				+reset
+				color: $white
+				font: 300 rem(16) $sans
+				+breakpoint($lg)
+					font-size: rem(22)
+			
+			&__img
+				position: relative
+				float: left
+				height: 90%
+				width: 40%
+				+breakpoint($lg)
+					width: 23%
+					padding: 0
+				
+				img
+					margin: 15% 0
+					height: auto
+					width: 100%
+					+breakpoint($lg)
 
-    &-contact
-        background-color: $pinker
-        background-image: linear-gradient(to top right, $white 50%, $pinker 50%)
-        height: 100vh
-        position: relative
-        text-align: center
-        width: 100vw
+	&-academic
+		+reset
+		background-color: $pink
+		background-image: linear-gradient(to bottom right, $pink 50%, $pinker 50%)
+		height: 100vh
+		position: relative
+		text-align: center
+		width: 100vw
 
-        &__content
-            box-sizing: border-box
-            height: 80%
-            width: 80%
-            background-color: $dark-purple
-            position: relative
-            padding: 5%
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
+		&__heading
+			@extend %heading
 
-        &__heading
-            +reset
-            font: rem(22) $title
-            color: $white
+		&__content
+			align-items: center
+			box-sizing: border-box
+			display: flex
+			height: 75%
+			justify-content: space-around
+			margin: 0 auto
+			padding: 0 rem(15)
+			position: relative
+			+breakpoint($lg)
+				padding: 0 rem(30)                
+				width: 80%
+
+			div
+				background-color: $super-dark-blue
+				border-radius: 10px
+				height: 47%
+				opacity: 0.8
+				width: 100%
+				+breakpoint($lg)
+					height: 100%
+					width: 47%
+
+				h2
+					+reset
+					color: $white
+					font: rem(22) $title
+					margin: 5% 0
+					+breakpoint($lg)
+						font-size: rem(34)
+
+	&-contact
+		background-color: $pinker
+		//background-image: linear-gradient(to top right, $white 50%, $pinker 50%)
+		background-image: linear-gradient(to bottom right, $pink 50%, $pinker 50%)
+		height: 100vh
+		position: relative
+		text-align: center
+		width: 100vw
+
+		&__content
+			box-sizing: border-box
+			height: 80%
+			width: 80%
+			background-color: $super-dark-blue
+			position: relative
+			padding: 5%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			+breakpoint($lg)
+				height: 75%
+				width: 75%
+
+		&__heading
+			+reset
+			font: rem(22) $title
+			color: $pinker
+			+breakpoint($lg)
+				font-size: rem(40)
+		
+		&__contact
+			margin: 8% 0 0
+
+			h4
+				+reset
+				color: $pinker
+				font: rem(26) $slim 
+				+breakpoint($lg)
+					font-size: rem(30)                
+
+			p
+				color: $white
+				font: rem(20) $slim
+				+breakpoint($lg)
+					font-size: rem(23)
+
+			div
+				margin: rem(25) 0
+				display: inline-block
+				text-align: center
+
+				div
+					margin: 0 rem(10)
+					height: rem(50)
+					width: rem(50)
+
+		&__linkedin
+			background-image: url(../img/icons/linkedin.png)
+			background-size: cover
+			cursor: pointer
+
+		&__github
+			background-image: url(../img/icons/github.png)
+			background-size: cover
+			cursor: pointer
+		
+		&__twitter
+			background-image: url(../img/icons/twitter.png)
+			background-size: cover
+			cursor: pointer
+
+.off
+	display: none
