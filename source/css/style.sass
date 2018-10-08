@@ -149,7 +149,7 @@ body, html
 			padding: 0 rem(15)
 			+breakpoint($lg)
 				width: 40%
-				height: 50vh
+				height: 60vh
 				padding: 0 rem(30)
 
 		&__me
@@ -310,8 +310,10 @@ body, html
 			height: 80%
 			width: 80%
 			background-color: $super-dark-blue
+			margin: 0
 			position: relative
 			padding: 5%
+			padding-top: 10%
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
@@ -321,36 +323,45 @@ body, html
 
 		&__heading
 			+reset
-			font: rem(22) $title
+			font: rem(25) $title
 			color: $pinker
+			margin-bottom: 10%
 			+breakpoint($lg)
 				font-size: rem(40)
+				margin: 0
 		
 		&__contact
-			margin: 8% 0 0
+			margin: 30% 0 0 
+			+breakpoint($lg)
+				margin: 5% 0 0
 
 			h4
-				+reset
+				box-sizing: border-box
+				margin-bottom: rem(15)
 				color: $pinker
-				font: rem(26) $slim 
+				font: rem(22) $slim 
 				+breakpoint($lg)
+					+reset
 					font-size: rem(30)                
 
 			p
 				color: $white
-				font: rem(20) $slim
+				font: rem(18) $slim
 				+breakpoint($lg)
 					font-size: rem(23)
 
 			div
-				margin: rem(25) 0
+				box-sizing: border-box
 				display: inline-block
 				text-align: center
 
 				div
+					height: rem(35)
 					margin: 0 rem(10)
-					height: rem(50)
-					width: rem(50)
+					width: rem(35)
+					+breakpoint($lg)
+						height: rem(50)
+						width: rem(50)
 
 		&__linkedin
 			background-image: url(../img/icons/linkedin.png)

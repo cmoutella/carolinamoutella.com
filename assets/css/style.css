@@ -196,7 +196,7 @@ body, html {
 @media (min-width: 62rem) {
   .cm-about div {
     width: 40%;
-    height: 50vh;
+    height: 60vh;
     padding: 0 1.875rem;
   }
 }
@@ -393,8 +393,10 @@ body, html {
   height: 80%;
   width: 80%;
   background-color: #283044;
+  margin: 0;
   position: relative;
   padding: 5%;
+  padding-top: 10%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -409,32 +411,41 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 1.375rem "Abril Fatface", cursive;
+  font: 1.5625rem "Abril Fatface", cursive;
   color: #ffcfd2;
+  margin-bottom: 10%;
 }
 @media (min-width: 62rem) {
   .cm-contact__heading {
     font-size: 2.5rem;
+    margin: 0;
   }
 }
 .cm-contact__contact {
-  margin: 8% 0 0;
+  margin: 30% 0 0;
+}
+@media (min-width: 62rem) {
+  .cm-contact__contact {
+    margin: 5% 0 0;
+  }
 }
 .cm-contact__contact h4 {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 0.9375rem;
   color: #ffcfd2;
-  font: 1.625rem "Poiret One", cursive;
+  font: 1.375rem "Poiret One", cursive;
 }
 @media (min-width: 62rem) {
   .cm-contact__contact h4 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-size: 1.875rem;
   }
 }
 .cm-contact__contact p {
   color: #fefcfd;
-  font: 1.25rem "Poiret One", cursive;
+  font: 1.125rem "Poiret One", cursive;
 }
 @media (min-width: 62rem) {
   .cm-contact__contact p {
@@ -442,14 +453,20 @@ body, html {
   }
 }
 .cm-contact__contact div {
-  margin: 1.5625rem 0;
+  box-sizing: border-box;
   display: inline-block;
   text-align: center;
 }
 .cm-contact__contact div div {
+  height: 2.1875rem;
   margin: 0 0.625rem;
-  height: 3.125rem;
-  width: 3.125rem;
+  width: 2.1875rem;
+}
+@media (min-width: 62rem) {
+  .cm-contact__contact div div {
+    height: 3.125rem;
+    width: 3.125rem;
+  }
 }
 .cm-contact__linkedin {
   background-image: url(../img/icons/linkedin.png);
