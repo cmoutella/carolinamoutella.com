@@ -412,8 +412,8 @@ body, html {
 @media (min-width: 62rem) {
   .cm-contact__content {
     height: 75%;
+    padding: 5%;
     width: 75%;
-    padding-top: 5%;
   }
 }
 .cm-contact__heading {
