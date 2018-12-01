@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Prociono");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Text+Me+One");
+@import url("https://fonts.googleapis.com/css?family=Prociono");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Text+Me+One");
+.item {
+  background-color: #3e3e3b;
+  border-radius: 0.61538rem;
+  margin: 1.53846rem;
+  padding: 1.15385rem; }
+  @media (min-width: 76.30769rem) {
+    .item {
+      width: 30%;
+      min-width: 100px;
+      max-width: 16.92308rem; } }
+  .item__title {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #ebeced;
+    text-align: center;
+    font-family: "Text Me One", sans-serif; }
+    @media (min-width: 76.30769rem) {
+      .item__title {
+        font-size: 1.69231rem; } }
+  .item__description {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #ebeced;
+    text-align: center;
+    font-family: "Text Me One", sans-serif; }
+    @media (min-width: 76.30769rem) {
+      .item__description {
+        font-size: 0.92308rem; } }
+  .item__discount {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #ebeced;
+    background-color: #f26968;
+    border-radius: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 76.30769rem) {
+      .item__discount {
+        width: 3.07692rem;
+        height: 3.07692rem; } }
+
+body {
+  background-color: #ebeced;
+  width: 100%; }
+
+.limit {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+  @media (min-width: 76.30769rem) {
+    .limit {
+      max-width: 98.46154rem; } }
+
+.hnd {
+  width: 100%;
+  height: 100%; }
+  .hnd__header {
+    height: 15%;
+    width: 100%;
+    padding: 30px 10px; }
+    @media (min-width: 76.30769rem) {
+      .hnd__header {
+        min-height: 80px; } }
+  .hnd__title {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Prociono", serif;
+    color: #3e3e3b;
+    text-align: center; }
+    @media (min-width: 76.30769rem) {
+      .hnd__title {
+        font-size: 5rem; } }
+    .hnd__title span {
+      display: inline-block;
+      font-family: "Great Vibes", cursive;
+      color: #f26968;
+      margin-left: 2%; }
+      @media (min-width: 76.30769rem) {
+        .hnd__title span {
+          font-size: 6.15385rem; } }
+  .hnd__slogan {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Text Me One", sans-serif;
+    color: #3e3e3b;
+    text-align: center; }
+    @media (min-width: 76.30769rem) {
+      .hnd__slogan {
+        font-size: 1.92308rem; } }
+
+.main-container {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 76.30769rem) {
+    .main-container {
+      flex-direction: row; } }

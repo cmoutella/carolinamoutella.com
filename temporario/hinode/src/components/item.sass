@@ -1,0 +1,40 @@
+@import '../css/_general.sass'
+
+.item
+    background-color: $darkgrey
+    border-radius: rem(8)
+    margin: rem(20)
+    padding: rem(15)
+    +breakpoint($lg)
+        width: 30%
+        min-width: 100px
+        max-width: rem(220)
+    
+    &__title
+        +reset
+        color: $white
+        text-align: center
+        font-family: $sans
+        +breakpoint($lg)
+            font-size: rem(22)
+    
+    &__description
+        +reset
+        color: $white
+        text-align: center
+        font-family: $sans
+        +breakpoint($lg)
+            font-size: rem(12)
+        
+    &__discount
+        +reset
+        color: $white
+        background-color: $red
+        border-radius: 50%
+        float: right
+        display: flex
+        justify-content: center
+        align-items: center
+        +breakpoint($lg)
+            width: rem(40)
+            height: rem(40)

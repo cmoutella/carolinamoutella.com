@@ -1,0 +1,57 @@
+@import '_general.sass'
+@import '../components/item.sass'
+
+body    
+    background-color: $white
+    width: 100%
+
+.limit
+    width: 80%
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    +breakpoint($lg)
+        max-width: rem(1280)
+
+.hnd
+    width: 100%
+    height: 100%
+
+    &__header
+        height: 15%
+        width: 100%
+        padding: 30px 10px
+        +breakpoint($lg)          
+            min-height: 80px
+
+    &__title
+        +reset
+        font-family: $serif
+        color: $darkgrey
+        text-align: center
+        +breakpoint($lg)
+            font-size: rem(65)
+        span
+            display: inline-block
+            font-family: $cursive
+            color: $red
+            margin-left: 2%
+            +breakpoint($lg)
+                font-size: rem(80)
+    
+    &__slogan
+        +reset
+        font-family: $sans
+        color: $darkgrey
+        text-align: center
+        +breakpoint($lg)
+            font-size: rem(25)
+
+.main-container
+    display: flex
+    flex-direction: column
+    +breakpoint($lg)
+        flex-direction: row
+
+
+    
