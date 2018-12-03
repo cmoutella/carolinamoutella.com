@@ -13,15 +13,19 @@ class App extends Component {
   render() {
     return (
       <div className="hnd">
-        <header className="hnd__header limit">
+        <header className="hnd__header">
           <h2 className="hnd__title">Neste <span>Natal</span></h2>
           <p className="hnd__slogan">Presenteie amor próprio</p>
         </header>
         <div className="main-container limit">
           <Item
-            title="Perfumes"
+            title="Perfumes Femininos"
             discount="25%"
-            id="perfume"></Item>
+            id="perfume-fem"></Item>
+            <Item
+            title="Perfumes Masculinos"
+            discount="25%"
+            id="perfume-masc"></Item>
           <Item
             title="Kits"
             discount="30%"
@@ -33,14 +37,14 @@ class App extends Component {
             id="monte-kit"
             ></Item>
         </div>
-        {/* <a className="ctlg" href="">
+        <button className="ctlg">
           <h4 className="ctlg__title">Veja o catálogo</h4>
           <p className="ctlg__description">Qualquer item com 20% de desconto</p>
           <div className="ctlg__discount">20%</div>
-        </a> */}
-        <div classaName="container limit">
+        </button>
+        <div className="container limit">
           <button className="info">Mais informações</button>
-          <a className="contato" href="https://wa.me/5521991350126">Faça seu pedido</a>
+          <a className="contato" href="https://wa.me/5521991350126" target="_blank">Faça seu pedido</a>
         </div>
       </div>
     );

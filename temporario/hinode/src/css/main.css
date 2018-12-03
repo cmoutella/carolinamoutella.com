@@ -6,24 +6,52 @@
 @import url("https://fonts.googleapis.com/css?family=Text+Me+One");
 .item {
   background-color: #3e3e3b;
+  position: relative;
   border-radius: 0.61538rem;
-  margin: 1.53846rem;
-  padding: 1.15385rem; }
+  margin: 0.76923rem;
+  padding: 0.61538rem;
+  width: 50%;
+  cursor: pointer; }
   @media (min-width: 76.30769rem) {
     .item {
-      width: 30%;
-      min-width: 100px;
-      max-width: 16.92308rem; } }
+      width: 45%;
+      padding: 1.15385rem;
+      margin: 1.15385rem;
+      min-width: 15.38462rem;
+      max-width: 23.07692rem;
+      min-height: 15.38462rem;
+      max-height: 23.07692rem; } }
+  .item:before {
+    background-color: #3e3e3b;
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    content: "";
+    margin: 0.38462rem auto 0;
+    display: block;
+    position: relative;
+    width: 40%;
+    min-width: 6.15385rem;
+    min-height: 6.15385rem; }
+    @media (min-width: 76.30769rem) {
+      .item:before {
+        min-width: 7.69231rem;
+        margin: 0.76923rem auto 0.76923rem;
+        min-height: 15.38462rem;
+        width: 65%;
+        height: 75%; } }
   .item__title {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: #ebeced;
     text-align: center;
+    margin-top: 0.38462rem;
     font-family: "Text Me One", sans-serif; }
     @media (min-width: 76.30769rem) {
       .item__title {
-        font-size: 1.69231rem; } }
+        font-size: 1.53846rem;
+        margin-top: 1.53846rem; } }
   .item__description {
     box-sizing: border-box;
     margin: 0;
@@ -41,52 +69,78 @@
     color: #ebeced;
     background-color: #f26968;
     border-radius: 50%;
-    float: right;
+    font-weight: bold;
+    font-family: 'arial';
+    font-size: 0.92308rem;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 1.92308rem;
+    height: 1.92308rem;
+    right: 1.53846rem;
+    bottom: 1.92308rem; }
     @media (min-width: 76.30769rem) {
       .item__discount {
-        width: 3.07692rem;
-        height: 3.07692rem; } }
+        font-size: 1.53846rem;
+        right: 1.92308rem;
+        bottom: 3.07692rem;
+        width: 4.61538rem;
+        height: 4.61538rem; } }
+
+#perfume-fem:before {
+  background-image: url("../img/leser.jpg"); }
+
+#perfume-masc:before {
+  background-image: url("../img/empire-vip.png"); }
+
+#kit:before {
+  background-image: url("../img/presente.png"); }
+
+#monte-kit:before {
+  background-image: url("../img/monta-kit.png"); }
 
 body {
   background-color: #ebeced;
   width: 100%; }
 
 .limit {
-  width: 80%;
-  position: relative;
   left: 50%;
-  transform: translateX(-50%); }
+  position: relative;
+  transform: translateX(-50%);
+  width: 90%; }
   @media (min-width: 76.30769rem) {
     .limit {
-      max-width: 98.46154rem; } }
+      max-width: 98.46154rem;
+      width: 80%; } }
 
 .hnd {
-  width: 100%;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
   .hnd__header {
-    height: 15%;
-    width: 100%;
-    padding: 30px 10px; }
+    min-height: 6.53846rem;
+    padding: 1.53846rem 2.30769rem 0; }
     @media (min-width: 76.30769rem) {
       .hnd__header {
-        min-height: 80px; } }
+        height: 15%;
+        min-height: 6.15385rem;
+        padding: 2.30769rem 0.76923rem;
+        width: 100%; } }
   .hnd__title {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Prociono", serif;
     color: #3e3e3b;
+    font-family: "Prociono", serif;
+    font-size: 3.07692rem;
     text-align: center; }
     @media (min-width: 76.30769rem) {
       .hnd__title {
         font-size: 5rem; } }
     .hnd__title span {
+      color: #f26968;
       display: inline-block;
       font-family: "Great Vibes", cursive;
-      color: #f26968;
       margin-left: 2%; }
       @media (min-width: 76.30769rem) {
         .hnd__title span {
@@ -95,8 +149,9 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Text Me One", sans-serif;
     color: #3e3e3b;
+    font-family: "Text Me One", sans-serif;
+    font-size: 1.15385rem;
     text-align: center; }
     @media (min-width: 76.30769rem) {
       .hnd__slogan {
@@ -104,7 +159,97 @@ body {
 
 .main-container {
   display: flex;
-  flex-direction: column; }
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.ctlg {
+  background-color: #4c586f;
+  border-radius: 0.61538rem;
+  color: #ebeced;
+  display: block;
+  font-family: "Text Me One", sans-serif;
+  margin: 0 auto;
+  padding: 0 0.76923rem 0.76923rem;
+  position: relative;
+  width: 80%; }
   @media (min-width: 76.30769rem) {
-    .main-container {
-      flex-direction: row; } }
+    .ctlg {
+      width: 63%; } }
+  .ctlg__title {
+    font-size: 1.15385rem; }
+  .ctlg__description {
+    font-size: 0.92308rem; }
+  .ctlg__discount {
+    align-items: center;
+    background-color: #f26968;
+    border-radius: 50%;
+    bottom: -0.38462rem;
+    color: #ebeced;
+    display: flex;
+    font-family: 'arial';
+    font-size: 1.15385rem;
+    font-weight: bold;
+    height: 3.07692rem;
+    justify-content: center;
+    position: absolute;
+    right: -0.38462rem;
+    width: 3.07692rem; }
+    @media (min-width: 76.30769rem) {
+      .ctlg__discount {
+        bottom: 1.15385rem;
+        font-size: 1.53846rem;
+        height: 4.61538rem;
+        right: 7.69231rem;
+        width: 4.61538rem; } }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.info {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: #f2ad9f;
+  border-radius: 0.61538rem;
+  color: #3e3e3b;
+  display: block;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.15385rem;
+  height: 2.69231rem;
+  margin: 0.38462rem auto;
+  width: 80%; }
+  @media (min-width: 76.30769rem) {
+    .info {
+      width: 45%;
+      padding: 1.15385rem;
+      margin: 1.15385rem;
+      min-width: 15.38462rem;
+      max-width: 23.07692rem;
+      min-height: 3.84615rem; } }
+
+.contato {
+  background-color: #6cbf84;
+  border-radius: 0.61538rem;
+  color: #3e3e3b;
+  cursor: pointer;
+  display: block;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.15385rem;
+  margin: 0.38462rem auto;
+  padding: 0.76923rem 0;
+  text-align: center;
+  text-decoration: none;
+  width: 80%; }
+  @media (min-width: 76.30769rem) {
+    .contato {
+      width: 45%;
+      padding: 1.15385rem;
+      margin: 1.15385rem;
+      min-width: 15.38462rem;
+      max-width: 23.07692rem;
+      min-height: 1.53846rem; } }

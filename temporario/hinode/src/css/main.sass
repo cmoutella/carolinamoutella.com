@@ -2,56 +2,150 @@
 @import '../components/item.sass'
 
 body    
-    background-color: $white
-    width: 100%
+	background-color: $white
+	width: 100%
 
 .limit
-    width: 80%
-    position: relative
-    left: 50%
-    transform: translateX(-50%)
-    +breakpoint($lg)
-        max-width: rem(1280)
+	left: 50%
+	position: relative
+	transform: translateX(-50%)
+	width: 90%
+	+breakpoint($lg)
+		max-width: rem(1280)
+		width: 80%
 
 .hnd
-    width: 100%
-    height: 100%
+	height: 100%
+	width: 100%
 
-    &__header
-        height: 15%
-        width: 100%
-        padding: 30px 10px
-        +breakpoint($lg)          
-            min-height: 80px
+	&__header
+		min-height: rem(85)
+		padding: rem(20) rem(30) 0
+		+breakpoint($lg)          
+			height: 15%
+			min-height: rem(80)
+			padding: rem(30) rem(10)
+			width: 100%
 
-    &__title
-        +reset
-        font-family: $serif
-        color: $darkgrey
-        text-align: center
-        +breakpoint($lg)
-            font-size: rem(65)
-        span
-            display: inline-block
-            font-family: $cursive
-            color: $red
-            margin-left: 2%
-            +breakpoint($lg)
-                font-size: rem(80)
-    
-    &__slogan
-        +reset
-        font-family: $sans
-        color: $darkgrey
-        text-align: center
-        +breakpoint($lg)
-            font-size: rem(25)
+	&__title
+		+reset
+		color: $darkgrey
+		font-family: $serif
+		font-size: rem(40)
+		text-align: center
+		+breakpoint($lg)
+			font-size: rem(65)
+			
+		span
+			color: $red
+			display: inline-block
+			font-family: $cursive
+			margin-left: 2%
+			+breakpoint($lg)
+				font-size: rem(80)
+		
+	&__slogan
+		+reset
+		color: $darkgrey
+		font-family: $sans
+		font-size: rem(15)
+		text-align: center
+		+breakpoint($lg)
+			font-size: rem(25)
 
 .main-container
-    display: flex
-    flex-direction: column
-    +breakpoint($lg)
-        flex-direction: row
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
 
+.ctlg
+	background-color: $darkblue
+	border-radius: rem(8)
+	color: $white
+	display: block
+	font-family: $sans
+	margin: 0 auto
+	padding: 0 rem(10) rem(10)
+	position: relative
+	width: 80%
+	+breakpoint($lg)
+		width: 63%
 
-    
+	&__title
+		font-size: rem(15)
+
+	&__description
+		font-size: rem(12)
+
+	&__discount
+		align-items: center
+		background-color: $red
+		border-radius: 50%
+		bottom: rem(-5)
+		color: $white
+		display: flex
+		font-family: 'arial'
+		font-size: rem(15)
+		font-weight: bold
+		height: rem(40)
+		justify-content: center
+		position: absolute
+		right: rem(-5)
+		width: rem(40)
+		+breakpoint($lg)
+			bottom: rem(15)
+			font-size: rem(20)
+			height: rem(60)
+			right: rem(100)
+			width: rem(60)
+
+.container
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	// +breakpoint($lg)
+	// 	background-color: $bege
+	// 	display: grid
+	// 	grid-template-columns: 1
+	// 	grid-template-rows: 2
+	// 	position: relative
+
+.info
+	+reset-button
+	background-color: $pink
+	border-radius: rem(8)
+	color: $darkgrey
+	display: block
+	font-family: $sans
+	font-size: rem(15)
+	height: rem(35)
+	margin: rem(5) auto
+	width: 80%
+	+breakpoint($lg)
+		width: 45%
+		padding: rem(15)
+		margin: rem(15)
+		min-width: rem(200)
+		max-width: rem(300)
+		min-height: rem(50)
+
+.contato
+	background-color: $green
+	border-radius: rem(8)
+	color: $darkgrey
+	cursor: pointer
+	display: block
+	font-family: $sans
+	font-size: rem(15)
+	margin: rem(5) auto
+	padding: rem(10) 0
+	text-align: center
+	text-decoration: none
+	width: 80%
+	+breakpoint($lg)
+		width: 45%
+		padding: rem(15)
+		margin: rem(15)
+		min-width: rem(200)
+		max-width: rem(300)
+		min-height: rem(20)
