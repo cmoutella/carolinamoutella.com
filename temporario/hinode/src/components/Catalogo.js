@@ -1,5 +1,4 @@
 import React from "react";
-import { string } from "prop-types";
 
 const Catalogo = () => (
     <div className="catalogo">
@@ -7,8 +6,6 @@ const Catalogo = () => (
     </div>
 );
 
-Catalogo.proptypes = {
-    
-}
+Catalogo.proptypes = {}
 
 export default Catalogo;
