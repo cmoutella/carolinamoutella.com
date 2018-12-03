@@ -22,7 +22,7 @@ class App extends Component {
   mainContent(display) {
     switch (display) {
       case '0':
-      return render(
+      return (
         <div className="main-container limit">
           <Item
             title="Perfumes Femininos"
