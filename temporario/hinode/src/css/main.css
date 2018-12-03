@@ -5,6 +5,12 @@
 @import url("https://fonts.googleapis.com/css?family=Great+Vibes");
 @import url("https://fonts.googleapis.com/css?family=Text+Me+One");
 .item {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   background-color: #3e3e3b;
   position: relative;
   border-radius: 0.61538rem;
@@ -174,7 +180,7 @@ body {
   width: 80%; }
   @media (min-width: 76.30769rem) {
     .ctlg {
-      width: 63%; } }
+      width: 60%; } }
   .ctlg__title {
     font-size: 1.15385rem; }
   .ctlg__description {
@@ -253,3 +259,8 @@ body {
       min-width: 15.38462rem;
       max-width: 23.07692rem;
       min-height: 1.53846rem; } }
+
+.catalogo {
+  background-color: #3e3e3b; }
+  .catalogo iframe {
+    margin: 0 auto; }
